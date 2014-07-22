@@ -2,6 +2,7 @@
 
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
 	l = log --pretty=oneline -n 20 --graph --abbrev-commit
+	lg = log --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
 
 	# View the current working tree status using the short format
 	s = status -s
@@ -14,6 +15,7 @@
 
 	# Pull in remote changes for the current repository and all its submodules
 	p = !"git pull; git submodule foreach git pull origin master"
+	purr = pull --rebase
 
 	# Clone a repository including all submodules
 	c = clone --recursive
@@ -106,6 +108,15 @@
 
 	# Detect copies as well as renames
 	renames = copies
+	tool = Kaleidoscope
+
+[difftool]
+
+	prompt = false
+
+[difftool "Kaleidoscope"]
+
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 
 [help]
 
@@ -116,6 +127,12 @@
 
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
+	tool = Kaleidoscope
+
+[mergetool "Kaleidoscope"]
+
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
 
 [push]
 
@@ -123,6 +140,20 @@
 	# installations. To use `simple` instead, add this to your `~/.extra` file:
 	# `git config --global push.default simple`. See http://git.io/mMah-w.
 	default = matching
+
+[credential]
+
+	helper = osxkeychain
+
+[github]
+
+	user = jessebilsten
+	;token = 6315e911c751cdc4d266adfe86a62514
+
+[user]
+
+	name = Jesse Bilsten
+	email = jesse@bilsten.net
 
 # URL shorthands
 
