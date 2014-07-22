@@ -1,38 +1,24 @@
 # JesseBilsten’s dotfiles
 
-![Screenshot of my shell prompt](http://i.imgur.com/EkEtphC.png)
+This is a fork of [mathias's dotfiles](https://github.com/mathiasbynens/dotfiles/) with a focus on Design & Development.  Go read mathias's README if you have't yet. This fork uses [carlhuda's janus](https://github.com/carlhuda/janus) for MacVim.  Feel free to modify it as you see fit.  The leader is `;` by default but can be changed in `~/.vimrc.before`.
 
 ## Installation
 
-### Using Git and the bootstrap script
+### Using Git
 
-You can clone the repository wherever you want. (I like to keep it in `~/Projects/dotfiles`, with `~/dotfiles` as a symlink.) The bootstrapper script will pull in the latest version and copy the files to your home folder.
+You can clone the repository wherever you want. (I like to keep mine in `~/Projects/dotfiles`, as each `~/.file` is a symlink to repository version so there's no reason to constantly reinstall).  This allows you and scripts to modify the expected `~/.file` within the ~ directory without any fear of overwriting necessary changes later by accident.
 
-```bash
-git clone https://github.com/mathiasbynens/dotfiles.git && cd dotfiles && source bootstrap.sh
-```
-
-To update, `cd` into your local `dotfiles` repository and then:
+TODO: Create a shell script to archive and symlink current `~/.files`
 
 ```bash
-source bootstrap.sh
+git clone https://github.com/jessebilsten/dotfiles.git && cd dotfiles && ./install.sh
 ```
 
-Alternatively, to update while avoiding the confirmation prompt:
-
-```bash
-set -- -f; source bootstrap.sh
-```
+When updating a `~/.file` make sure you check in your changes into your forked version and maintain the flow of dotfile changes in case you run into errors.
 
 ### Git-free install
 
-To install these dotfiles without Git:
-
-```bash
-cd; curl -#L https://github.com/mathiasbynens/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,bootstrap.sh,LICENSE-MIT.txt}
-```
-
-To update later on, just run that command again.
+Don't do this.  Maintain a history of your `~/.files` in git for your own sanity.  Think of the children!
 
 ### Specify the `$PATH`
 
@@ -46,22 +32,22 @@ export PATH="$HOME/utils:$PATH"
 
 ### Add custom commands without creating a new fork
 
-If `~/.extra` exists, it will be sourced along with the other files. You can use this to add a few custom commands without the need to fork this entire repository, or to add commands you don’t want to commit to a public repository.
+`~/.extra` is not necessary, but if you want a separate place to manage variables local to a machine, this is where to put them.
 
 My `~/.extra` looks something like this:
 
 ```bash
 # Git credentials
 # Not in the repository, to prevent people from accidentally committing under my name
-GIT_AUTHOR_NAME="Mathias Bynens"
+GIT_AUTHOR_NAME="Jesse Bilsten"
 GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
 git config --global user.name "$GIT_AUTHOR_NAME"
-GIT_AUTHOR_EMAIL="mathias@mailinator.com"
+GIT_AUTHOR_EMAIL="jesse@bilsten.net"
 GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
 git config --global user.email "$GIT_AUTHOR_EMAIL"
 ```
 
-You could also use `~/.extra` to override settings, functions and aliases from my dotfiles repository. It’s probably better to [fork this repository](https://github.com/mathiasbynens/dotfiles/fork) instead, though.
+You could also use `~/.extra` to override settings, functions and aliases from my dotfiles repository. It’s probably better to [fork this repository](https://github.com/jessebilsten/dotfiles/fork) instead, though.
 
 ### Sensible OS X defaults
 
@@ -90,28 +76,16 @@ brew bundle ~/Caskfile
 ## Feedback
 
 Suggestions/improvements
-[welcome](https://github.com/mathiasbynens/dotfiles/issues)!
+[welcome](https://github.com/jessebilsten/dotfiles/issues)!
 
 ## Author
 
-| [![twitter/mathias](http://gravatar.com/avatar/24e08a9ea84deb17ae121074d0f17125?s=70)](http://twitter.com/mathias "Follow @mathias on Twitter") |
+| [![twitter/lostangel](https://s.gravatar.com/avatar/783e5f83be9701ba77f7e5ae861597b0?s=80)](http://twitter.com/lostangel "Follow @lostangel on Twitter") |
 |---|
-| [Mathias Bynens](http://mathiasbynens.be/) |
+| [Jesse Bilsten](http://bilsten.net/) |
 
 ## Thanks to…
 
-* @ptb and [his _OS X Lion Setup_ repository](https://github.com/ptb/Mac-OS-X-Lion-Setup)
-* [Ben Alman](http://benalman.com/) and his [dotfiles repository](https://github.com/cowboy/dotfiles)
-* [Chris Gerke](http://www.randomsquared.com/) and his [tutorial on creating an OS X SOE master image](http://chris-gerke.blogspot.com/2012/04/mac-osx-soe-master-image-day-7.html) + [_Insta_ repository](https://github.com/cgerke/Insta)
-* [Cãtãlin Mariş](https://github.com/alrra) and his [dotfiles repository](https://github.com/alrra/dotfiles)
-* [Gianni Chiappetta](http://gf3.ca/) for sharing his [amazing collection of dotfiles](https://github.com/gf3/dotfiles)
-* [Jan Moesen](http://jan.moesen.nu/) and his [ancient `.bash_profile`](https://gist.github.com/1156154) + [shiny _tilde_ repository](https://github.com/janmoesen/tilde)
-* [Lauri ‘Lri’ Ranta](http://lri.me/) for sharing [loads of hidden preferences](http://osxnotes.net/defaults.html)
-* [Matijs Brinkhuis](http://hotfusion.nl/) and his [dotfiles repository](https://github.com/matijs/dotfiles)
-* [Nicolas Gallagher](http://nicolasgallagher.com/) and his [dotfiles repository](https://github.com/necolas/dotfiles)
-* [Sindre Sorhus](http://sindresorhus.com/)
-* [Tom Ryder](http://blog.sanctum.geek.nz/) and his [dotfiles repository](https://github.com/tejr/dotfiles)
-* [Kevin Suttle](http://kevinsuttle.com/) and his [dotfiles repository](https://github.com/kevinSuttle/dotfiles) and [OSXDefaults project](https://github.com/kevinSuttle/OSXDefaults), which aims to provide better documentation for [`~/.osx`](http://mths.be/osx)
-* [Haralan Dobrev](http://hkdobrev.com/)
+* [Mathias Bynens]() and the [dotfiles](https://github.com/mathiasbynens/dotfiles) that started it all
+* [Paul Irish](http://paulirish.com) and his [dotfiles repository](https://github.com/paulirish/dotfiles)
 
-* anyone who [contributed a patch](https://github.com/mathiasbynens/dotfiles/contributors) or [made a helpful suggestion](https://github.com/mathiasbynens/dotfiles/issues)
