@@ -36,21 +36,23 @@ install homebrew/dupes/screen
 install homebrew/php/php55 --with-gmp
 
 # Install other useful binaries
-install ack
-install bfg
+install ack # Grep like Searching: http://beyondgrep.com/
+install bfg # Git Repo Cleaning: http://rtyley.github.io/bfg-repo-cleaner/
 #install exiv2
-install foremost
-install git
-install hashpump
+install foremost # File recovery: http://foremost.sourceforge.net/
+install git # Version control
+install hashpump # Hash Length Extension Attack: https://github.com/bwall/HashPump
 install imagemagick --with-webp
-install lynx
-install nmap
+install lynx # Text web browser
+install nmap # 'Network Mapper' security scanner
 install node # This installs `npm` too using the recommended installation method
 install p7zip
 install pigz
+install postgresql # Postgres DB
 install pv
+install python # Script Programming Language
 install rename
-install rhino
+install rhino # Javascript Parsing Engine
 install sqlmap
 install tree
 install ucspi-tcp # `tcpserver` et al.
@@ -58,7 +60,9 @@ install webkit2png
 install xpdf
 install zopfli
 
-install homebrew/versions/lua52
+install homebrew/versions/lua52 # Very fast scripting language for gaming
+
+linkapps
 
 # Remove outdated versions from the cellar
 cleanup
