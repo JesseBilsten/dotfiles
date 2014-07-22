@@ -1,24 +1,73 @@
 # Install native apps
 # Usage: `brew bundle Caskfile`
 
-install caskroom/cask/brew-cask
-tap caskroom/versions
+# Make sure we're using the latest Homebrew
+update
 
+# Upgrade any already installed formulae
+upgrade
+
+tap caskroom/cask # Install homebrew-cask for native Mac applications
+tap caskroom/versions # Allow us to install versions of apps like Sublime Text 3
+
+# Install cask
+install brew-cask
+
+# Install native applications
+
+cask install alfred 2> /dev/null
+cask alfred link # Link the cask install folder to Alfred so it can search them
+
+# Design
+cask install adobe-creative-cloud 2> /dev/null
+cask install sketch 2> /dev/null
+cask install colorschemer-studio 2> /dev/null
+
+# Communication
+cask install slack 2> /dev/null
+cask install hipchat 2> /dev/null
+cask install screenhero 2> /dev/null
+
+# Dev
+cask install sublime-text3 2> /dev/null
+cask install virtualbox 2> /dev/null
+cask install transmit 2> /dev/null
+cask install iterm2 2> /dev/null
+cask install kaleidoscope 2> /dev/null
+#cask install ksdiff 2> /dev/null #not necessary if Kaleidoscope is installed via Cask
+cask install tower 2> /dev/null #http://www.git-tower.com/
+#cask install macvim 2> /dev/null #not necessary if installed via homebrew
+
+# Essential
+cask install onepassword 2> /dev/null
 cask install dropbox 2> /dev/null
-cask install google-chrome 2> /dev/null
-cask install google-chrome-canary 2> /dev/null
+
+# Utils
+cask install transmission 2> /dev/null
+cask install istat-menus 2> /dev/null
+cask install divvy 2> /dev/null
+cask install vlc 2> /dev/null
+cask install mplayerx 2> /dev/null
+cask install spotify 2> /dev/null
+cask install the-unarchiver 2> /dev/null
+cask install miro-video-converter 2> /dev/null
 cask install imagealpha 2> /dev/null
 cask install imageoptim 2> /dev/null
-cask install iterm2 2> /dev/null
-cask install macvim 2> /dev/null
-cask install miro-video-converter 2> /dev/null
-cask install opera 2> /dev/null
-cask install opera-developer 2> /dev/null
-cask install opera-next 2> /dev/null
-cask install sublime-text 2> /dev/null
-cask install the-unarchiver 2> /dev/null
+
+# Browsers
+cask install google-chrome 2> /dev/null
+cask install google-chrome-canary 2> /dev/null
+cask install firefox 2> /dev/null
+#cask install opera 2> /dev/null
+#cask install opera-developer 2> /dev/null
+#cask install opera-next 2> /dev/null
+
+# Other
 cask install torbrowser 2> /dev/null
-cask install transmission 2> /dev/null
-cask install ukelele 2> /dev/null
-cask install virtualbox 2> /dev/null
-cask install vlc 2> /dev/null
+
+# Why use '2> /dev/null'? http://www.novell.com/coolsolutions/feature/19859.html
+
+
+
+# Remove outdated versions from the cellar
+cleanup
