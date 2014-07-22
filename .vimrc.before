@@ -1,0 +1,7 @@
+" Janus setup
+
+" Change mapleader
+let mapleader=";"
+"
+" Plugin Variables
+let g:airline_powerline_fonts = 1
