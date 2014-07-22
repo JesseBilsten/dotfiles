@@ -14,7 +14,7 @@ if has("gui_macvim")
 	"set guioptions-=r  "remove right-hand scroll bar
 	set guioptions-=L  "remove left-hand scroll bar
 	set fuoptions=maxhorz,maxvert "start in full window
-	macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR> " Command-Return for fullscreen
+	" macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR> " Command-Return for fullscreen
 endif
 
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
