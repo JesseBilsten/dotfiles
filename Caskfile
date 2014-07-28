@@ -20,7 +20,7 @@ cask alfred link # Link the cask install folder to Alfred so it can search them
 
 # Design
 cask install adobe-creative-cloud 2> /dev/null
-cask install sketch 2> /dev/null
+#cask install sketch 2> /dev/null # Install via App Store - no license currently
 cask install colorschemer-studio 2> /dev/null
 
 # Communication
