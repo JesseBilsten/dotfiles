@@ -20,8 +20,9 @@ cask alfred link # Link the cask install folder to Alfred so it can search them
 
 # Design
 cask install adobe-creative-cloud 2> /dev/null
-#cask install sketch 2> /dev/null # Install via App Store - no license currently
+#cask install sketch 2> /dev/null # Install via App Store
 cask install colorschemer-studio 2> /dev/null
+cask install axure-rp-pro 2> /dev/null
 
 # Communication
 cask install slack 2> /dev/null
@@ -29,6 +30,7 @@ cask install hipchat 2> /dev/null
 cask install screenhero 2> /dev/null
 
 # Dev
+cask install mou 2> /dev/null # Markdown editor
 cask install sublime-text3 2> /dev/null
 cask install virtualbox 2> /dev/null
 cask install transmit 2> /dev/null
