@@ -32,9 +32,13 @@ export PATH="$HOME/utils:$PATH"
 
 ### Add custom commands without creating a new fork
 
-`~/.extra` is not necessary, but if you want a separate place to manage variables local to a machine, this is where to put them.
+```
+	This was previously called `.extra` by [Mathias Bynens](https://github.com/mathiasbynens) but it didn't feel like "extra" information, it was local to me which is why it's in my user directory.  [Dotmatrix](http://hashrocket.com/blog/posts/dotmatrix-the-hashrocket-dot-file-repo) suggests to throw the `.local` extension onto any other dotfile that has a local setting (e.g. `.bash_profile.local`) and this feels accurate including the parentless `.local` for user specific information.
+```
 
-My `~/.extra` looks something like this:
+`~/.local` is not necessary, but if you want a separate place to manage variables local to a machine, this is where to put them.
+
+My `~/.local` looks something like this:
 
 ```bash
 # Git credentials
@@ -47,7 +51,7 @@ GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
 git config --global user.email "$GIT_AUTHOR_EMAIL"
 ```
 
-You could also use `~/.extra` to override settings, functions and aliases from my dotfiles repository. It’s probably better to [fork this repository](https://github.com/jessebilsten/dotfiles/fork) instead, though.
+You could also use `~/.local` to override settings, functions and aliases from my dotfiles repository. It’s probably better to [fork this repository](https://github.com/jessebilsten/dotfiles/fork) instead, though.
 
 ### Sensible OS X defaults
 
@@ -86,6 +90,6 @@ Suggestions/improvements
 
 ## Thanks to…
 
-* [Mathias Bynens]() and the [dotfiles](https://github.com/mathiasbynens/dotfiles) that started it all
+* [Mathias Bynens](https://github.com/mathiasbynens) and the [dotfiles](https://github.com/mathiasbynens/dotfiles) that started it all
 * [Paul Irish](http://paulirish.com) and his [dotfiles repository](https://github.com/paulirish/dotfiles)
 
