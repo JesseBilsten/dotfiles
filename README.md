@@ -32,9 +32,7 @@ export PATH="$HOME/utils:$PATH"
 
 ### Add custom commands without creating a new fork
 
-```
-	This was previously called `.extra` by [Mathias Bynens](https://github.com/mathiasbynens) but it didn't feel like "extra" information, it was local to me which is why it's in my user directory.  [Dotmatrix](http://hashrocket.com/blog/posts/dotmatrix-the-hashrocket-dot-file-repo) suggests to throw the `.local` extension onto any other dotfile that has a local setting (e.g. `.bash_profile.local`) and this feels accurate including the parentless `.local` for user specific information.
-```
+> This was previously called `.extra` by [Mathias Bynens](https://github.com/mathiasbynens) but it didn't feel like "extra" information, it was local to me which is why it's in my user directory.  [Dotmatrix](http://hashrocket.com/blog/posts/dotmatrix-the-hashrocket-dot-file-repo) suggests to throw the `.local` extension onto any other dotfile that has a local setting (e.g. `.bash_profile.local`) and this feels accurate including the parentless `.local` for user specific information.
 
 `~/.local` is not necessary, but if you want a separate place to manage variables local to a machine, this is where to put them.
 
