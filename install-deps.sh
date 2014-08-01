@@ -74,8 +74,7 @@ brew tap caskroom/versions # Allow us to install versions of apps like Sublime T
 # Install cask
 brew install brew-cask
 
-# Install native applications
-
+# Process
 brew cask install alfred 2> /dev/null
 brew cask alfred link # Link the cask install folder to Alfred so it can search them
 
@@ -116,6 +115,7 @@ brew cask install the-unarchiver 2> /dev/null
 brew cask install miro-video-converter 2> /dev/null
 brew cask install imagealpha 2> /dev/null
 brew cask install imageoptim 2> /dev/null
+brew cask install totalfinder 2> /dev/null
 
 # Browsers
 brew cask install google-chrome 2> /dev/null
