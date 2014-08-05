@@ -133,6 +133,17 @@ brew cask install torbrowser 2> /dev/null
 brew cleanup
 
 #################################################
+# Ruby
+#################################################
+
+rbenv install 2.1.2
+rbenv global 2.1.2 # Switch to 2.1.2 globally
+rbenv rehash # Update paths for gems
+
+gem update --system
+gem install compass
+
+#################################################
 # Dependencies
 #################################################
 
