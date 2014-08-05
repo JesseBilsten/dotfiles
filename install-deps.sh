@@ -134,6 +134,14 @@ brew cask install torbrowser 2> /dev/null
 brew cleanup
 
 #################################################
+# Node.js
+#################################################
+
+npm install -g docpad # Docpad
+npm install -g yo # Yeoman, Grunt & Bower
+npm install -g bower
+
+#################################################
 # Ruby
 #################################################
 
