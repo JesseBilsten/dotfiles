@@ -54,6 +54,7 @@ brew install pv
 brew install python # Script Programming Language
 brew install rename
 brew install rhino # Javascript Parsing Engine
+brew install rbenv ruby-build # Ruby version management: see matching `eval "$(rbenv init -)"` in .functions
 brew install sqlmap
 brew install tree
 brew install ucspi-tcp # `tcpserver` et al.
