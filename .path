@@ -1,1 +1,10 @@
-#export PATH="$HOME/utils:$PATH"
+# PATH like a bawss
+# Check "cat /etc/paths" && "cat /etc/paths.d" for duplicates
+
+      #PATH=/local/bin
+#PATH=$PATH:/local/sbin
+#PATH=$PATH:/bin
+#PATH=$PATH:~/.rbenv/bin
+#PATH=$PATH:~/code/git-friendly
+
+#export PATH
