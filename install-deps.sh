@@ -61,6 +61,7 @@ brew install ucspi-tcp # `tcpserver` et al.
 brew install webkit2png
 brew install xpdf
 brew install zopfli
+brew install z # ropa/z for quick directory access at the terminal
 
 brew install homebrew/versions/lua52 # Very fast scripting language for gaming
 
