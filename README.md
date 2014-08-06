@@ -59,20 +59,15 @@ When setting up a new Mac, you may want to set some sensible OS X defaults:
 ./.osx
 ```
 
-### Install Homebrew formulae
+### Install Homebrew/Cask/Dependencies/Environments
 
-When setting up a new Mac, you may want to install some common [Homebrew](http://brew.sh/) formulae (after installing Homebrew, of course):
-
-```bash
-brew bundle ~/Brewfile
-```
-
-### Install native apps with `brew cask`
-
-You could also install native apps with [`brew cask`](https://github.com/phinze/homebrew-cask):
+I played around with the Brewfile and Caskfile but didn't like that they
+were separate and different from my dependencies (especially if there's
+an order necessary).  This is combined into one giant install.  Would
+like to add an update file as well that updates everything correctly.
 
 ```bash
-brew bundle ~/Caskfile
+./install.sh
 ```
 
 ## Feedback
