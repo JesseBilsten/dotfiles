@@ -100,6 +100,7 @@ brew cask install iterm2 2> /dev/null
 brew cask install kaleidoscope 2> /dev/null
 #brew cask install ksdiff 2> /dev/null #not necessary if Kaleidoscope is installed via Cask
 brew cask install tower 2> /dev/null #http://www.git-tower.com/
+brew cask install sourcetree 2> /dev/null #free version of GUI based git client
 #brew cask install macvim 2> /dev/null #not necessary if installed via homebrew
 
 # Essential
