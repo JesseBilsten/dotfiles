@@ -51,6 +51,4 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Add support for 'z'
-if type z &> /dev/null; then
-	source `brew --prefix`/etc/profile.d/z.sh;
-fi
+. `brew --prefix`/etc/profile.d/z.sh;
