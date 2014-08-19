@@ -67,7 +67,7 @@
 [core]
 
 	# Use custom `.gitignore` and `.gitattributes`
-	excludesfile = ~/.gitignore
+	excludesfile = /Users/jbilsten/.gitignore
 	attributesfile = ~/.gitattributes
 
 	# Treat spaces before tabs and all kinds of trailing whitespace as an error
@@ -153,7 +153,7 @@
 [user]
 
 	name = Jesse Bilsten
-	email = jesse@bilsten.net
+	email = jbilsten@godaddy.com
 
 # URL shorthands
 
@@ -176,5 +176,44 @@
 [url "git://gist.github.com/"]
 
 	insteadOf = "gist:"
+
 [mergetool]
+
 	keepBackup = false
+
+[difftool "sourcetree"]
+
+	cmd = /usr/local/bin/ksdiff -w \"$LOCAL\" \"$REMOTE\"
+	path = 
+
+[mergetool "sourcetree"]
+
+	cmd = /usr/local/bin/ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
+
+[filter "media"]
+
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+
+# Interactive rebase using the github guitool
+[guitool "Rebase onto..."]
+
+	cmd = git rebase $REVISION
+	revprompt = yes
+
+[guitool "Rebase/Continue"]
+
+	cmd = git rebase --continue
+
+[guitool "Rebase/Skip"]
+
+	cmd = git rebase --skip
+
+[guitool "Rebase/Abort"]
+
+	cmd = git rebase --abort
+
+[guitool "Pull with Rebase"]
+
+	cmd = git pull --rebase
