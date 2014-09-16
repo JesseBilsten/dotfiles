@@ -109,3 +109,7 @@ if has("autocmd")
 	" Treat .md files as .markdown
 	autocmd BufNewFile,BufRead *.md setfiletype markdown syntax=markdown
 endif
+
+" Syntax Highlighting
+hi link coffeeReservedError NONE
+hi link ecoMissingColonError NONE
