@@ -17,6 +17,9 @@ if has("gui_macvim")
 	" macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR> " Command-Return for fullscreen
 endif
 
+" Change tabs to spaces: 2
+"set tabstop=2 shiftwidth=2 expandtab
+set et
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 set clipboard=unnamed
 " Enhance command-line completion
