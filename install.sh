@@ -44,6 +44,7 @@ brew install foremost # File recovery: http://foremost.sourceforge.net/
 brew install git # Version control
 brew install hashpump # Hash Length Extension Attack: https://github.com/bwall/HashPump
 brew install heroku-toolbelt # Toolbelt for using Heroku
+brew install homebrew/versions/lua52 # Very fast scripting language for gaming
 brew install imagemagick --with-webp
 brew install lynx # Text web browser
 brew install nmap # 'Network Mapper' security scanner
@@ -54,18 +55,16 @@ brew install pigz
 brew install postgresql # Postgres DB
 brew install pv
 brew install python # Script Programming Language
+brew install rbenv ruby-build # Ruby version management: see matching `eval "$(rbenv init -)"` in .functions; alternative to rvm
 brew install rename
 brew install rhino # Javascript Parsing Engine
-brew install rbenv ruby-build # Ruby version management: see matching `eval "$(rbenv init -)"` in .functions
 brew install sqlmap
 brew install tree
 brew install ucspi-tcp # `tcpserver` et al.
 brew install webkit2png
 brew install xpdf
-brew install zopfli
 brew install z # ropa/z for quick directory access at the terminal
-
-brew install homebrew/versions/lua52 # Very fast scripting language for gaming
+brew install zopfli
 
 brew linkapps
 
