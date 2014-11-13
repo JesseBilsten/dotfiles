@@ -47,6 +47,7 @@ brew install imagemagick --with-webp
 brew install lynx # Text web browser
 brew install nmap # 'Network Mapper' security scanner
 brew install node # This installs `npm` too using the recommended installation method
+brew install nvm # Manages the node install
 brew install p7zip
 brew install pigz
 brew install postgresql # Postgres DB
