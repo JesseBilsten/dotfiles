@@ -43,6 +43,7 @@ brew install bfg # Git Repo Cleaning: http://rtyley.github.io/bfg-repo-cleaner/
 brew install foremost # File recovery: http://foremost.sourceforge.net/
 brew install git # Version control
 brew install hashpump # Hash Length Extension Attack: https://github.com/bwall/HashPump
+brew install heroku-toolbelt # Toolbelt for using Heroku
 brew install imagemagick --with-webp
 brew install lynx # Text web browser
 brew install nmap # 'Network Mapper' security scanner
