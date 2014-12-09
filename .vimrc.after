@@ -7,14 +7,14 @@ colorscheme solarized
 
 " GUI Settings
 if has("gui_macvim")
-	" Default font
-	set guifont=Inconsolata-dz\ for\ Powerline:h16
-	set guioptions-=m  "remove menu bar
-	set guioptions-=T  "remove toolbar
-	"set guioptions-=r  "remove right-hand scroll bar
-	set guioptions-=L  "remove left-hand scroll bar
-	set fuoptions=maxhorz,maxvert "start in full window
-	" macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR> " Command-Return for fullscreen
+  " Default font
+  set guifont=Inconsolata-dz\ for\ Powerline:h16
+  set guioptions-=m  "remove menu bar
+  set guioptions-=T  "remove toolbar
+  "set guioptions-=r  "remove right-hand scroll bar
+  set guioptions-=L  "remove left-hand scroll bar
+  set fuoptions=maxhorz,maxvert "start in full window
+  " macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR> " Command-Return for fullscreen
 endif
 
 " Change tabs to spaces: 2
@@ -36,7 +36,7 @@ set encoding=utf-8 nobomb
 set binary
 set noeol
 if exists("&undodir")
-	set undodir=~/.vim/undo
+  set undodir=~/.vim/undo
 endif
 
 " Don’t create backups when editing files in certain directories
@@ -70,19 +70,19 @@ set title
 set showcmd
 " Use relative line numbers
 if exists("&relativenumber")
-	set relativenumber
-	au BufReadPost * set relativenumber
+  set relativenumber
+  au BufReadPost * set relativenumber
 endif
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
 
 " Strip trailing whitespace (,ss)
 function! StripWhitespace()
-	let save_cursor = getpos(".")
-	let old_query = getreg('/')
-	:%s/\s\+$//e
-	call setpos('.', save_cursor)
-	call setreg('/', old_query)
+  let save_cursor = getpos(".")
+  let old_query = getreg('/')
+  :%s/\s\+$//e
+  call setpos('.', save_cursor)
+  call setreg('/', old_query)
 endfunction
 
 " Remap keys
@@ -96,7 +96,11 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-" Space toggle folds.
+
+" Folding
+"
+" Space toggle folds or create a new one if one doesn't exist.
+"inoremap <C-Space> <C-O>za
 nnoremap <Space> za
 vnoremap <Space> za
 " Plugins
@@ -108,12 +112,12 @@ nmap <Leader>a <Plug>(EasyAlign)
 
 " Automatic commands
 if has("autocmd")
-	" Enable file type detection
-	filetype on
-	" Treat .json files as .js
-	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
-	" Treat .md files as .markdown
-	autocmd BufNewFile,BufRead *.md setfiletype markdown syntax=markdown
+  " Enable file type detection
+  filetype on
+  " Treat .json files as .js
+  autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
+  " Treat .md files as .markdown
+  autocmd BufNewFile,BufRead *.md setfiletype markdown syntax=markdown
 endif
 
 " Syntax Highlighting
