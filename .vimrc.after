@@ -103,7 +103,15 @@ nnoremap <C-H> <C-W><C-H>
 " Space toggle folds or create a new one if one doesn't exist.
 "inoremap <C-Space> <C-O>za
 nnoremap <Space> za
-vnoremap <Space> za
+onoremap <Space> <C-O>za
+vnoremap <Space> zf
+" Close parent fold with shift-space
+nnoremap <S-Space> zc
+vnoremap <S-Space> zc
+" Load saved folds
+au BufWinLeave ?* mkview 1
+au BufWinEnter ?* silent loadview 1
+
 " Plugins
 "
 " Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
