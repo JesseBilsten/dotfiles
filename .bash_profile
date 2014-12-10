@@ -52,3 +52,6 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Add support for 'z'
 . `brew --prefix`/etc/profile.d/z.sh;
+
+# Add support for 'nvm'
+source ~/.nvm/nvm.sh
