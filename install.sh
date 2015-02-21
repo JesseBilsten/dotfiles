@@ -1,5 +1,5 @@
 # Install command-line tools using Homebrew
-ruby <(curl -fsSkL raw.github.com/mxcl/homebrew/go/install)
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 #################################################
 # Brew Applications
