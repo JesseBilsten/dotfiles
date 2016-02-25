@@ -222,3 +222,7 @@
 	clean = git hawser clean %f
 	smudge = git hawser smudge %f
 	required = true
+[filter "lfs"]
+	smudge = git-lfs smudge %f
+	required = true
+	clean = git-lfs clean %f
