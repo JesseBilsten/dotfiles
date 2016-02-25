@@ -32,6 +32,7 @@ brew install narwhal
 
 # Install more recent versions of some OS X tools
 brew install macvim --env-std --override-system-vim
+brew install neovim/neovim/neovim
 brew install homebrew/dupes/grep
 brew install homebrew/dupes/screen
 brew install homebrew/php/php55 --with-gmp
