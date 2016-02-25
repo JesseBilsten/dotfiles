@@ -143,6 +143,12 @@ brew cleanup
 npm install -g docpad # Docpad
 npm install -g yo # Yeoman, Grunt & Bower
 npm install -g bower
+# Turn the spinner off in favor of showing http traffic
+npm config set spin false
+# Turn off the progress meter in favor of http traffic
+npm config set progress false
+# Show a log when running `npm install`. Adds `loglevel=info` to `~/.npmrc`
+npm config set loglevel info
 
 #################################################
 # Ruby
